@@ -1,0 +1,15 @@
+from PyQt5.QtWidgets import QApplication, QMainWindow #導入PyQt相關模塊
+
+from fuck import * #導入之前新生成的窗口模塊
+
+class MyWindow(QMainWindow, Ui_mainWindow): 
+    def __init__(self, parent=None): 
+        super(MyWindow, self).__init__(parent) 
+        self.setupUi(self)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)    
+    myWin = MyWindow() #創建對象 
+    myWin.show() #顯示窗口 
+    sys.exit(app.exec_())#`的對象，啟動即可。
+
